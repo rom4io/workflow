@@ -1,0 +1,22 @@
+lines (11 sloc)  298 Bytes
+
+@startuml
+[*] --> NEW
+
+NEW --> SAVE : saving
+
+SAVE --> CHECK : to_check
+
+CHECK -->APPROVE : approved
+
+CHECK --> DECLINE : declined
+
+DECLINE --> [*]
+
+CHECK --> CORRECT : to_correct
+
+CORRECT --> SAVE : save_after_correct
+
+APPROVE --> [*]
+
+@enduml
